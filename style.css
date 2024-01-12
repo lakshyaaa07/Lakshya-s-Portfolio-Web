@@ -297,3 +297,24 @@ a.btn:nth-child(2)::before{
 .liquid-shape:nth-child(2){
     filter: blur(50px);
 }
+
+
+/* -------------------- About section css ------------------ */
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 2rem;
+    background: var(--secon-bg-color);
+}
+
+.about .img-about {
+    text-align: center;
+    position: relative;
+}
+
+.about .img-about img{
+    max-width: 400px;
+    height: auto;
+}
