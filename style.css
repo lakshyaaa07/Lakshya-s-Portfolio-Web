@@ -16,7 +16,7 @@
     --secon-bg-color: #292e33;
     --big-font: 2.5rem;
     --normal-font: 2rem;
-    --neon-box-shadow: 0 0 .5rem #12f7ff;
+    --neon-box-shadow: 0 0 .6rem #12f7ff;
     --h2-font: 3rem;
     --font-neon-text-shadow: 0 0 10px rgba(18,247,255,0.3),
     0 0 20px rgba(18, 247, 255, 0.3),
@@ -50,6 +50,7 @@ header{
 
 span{
     color: var(--hover-color);
+    font-size: xx-large;
 }
 
 .navlist{
@@ -317,7 +318,7 @@ a.btn:nth-child(2)::before{
 .about .img-about img{
     max-width: 400px;
     height: auto;
-    border-radius: 40%;
+    /* border-radius: 40%;  */
 }
 
 
@@ -353,13 +354,13 @@ a.btn:nth-child(2)::before{
     background-color: var(--bg-color);
     font-size: .7rem;
     position: absolute;
-    padding: 10px;
-    width: 99px;
-    height: 99px;
+    padding: 10px; /*12px*/
+    width: 90px; /*99px*/
+    height: 90px; /*99px*/
     border-radius: 69% 31% 66% 34% / 21% 30% 70% 79%;
     display: block;
     box-shadow: var(--neon-box-shadow);
-    border: 2px solid var(--hover-color);
+    border: 1px solid var(--hover-color);
     outline: 2px solid var(--bg-color);
     z-index: 100;
     animation: morph 6s linear infinite;
@@ -367,18 +368,24 @@ a.btn:nth-child(2)::before{
 }
 
 .info-about1 {
-    left: 0%;
-    top: 10%;
+    /* left: 0%;
+    top: 10%; */
+    left: 10%;
+    top: 34%;
 }
 
 .info-about2 {
-    top: 86%;
-    left: 35%;
+    top: 15%;
+    left: 66%;
+    /* top: 86%;
+    left: 35%; */
 }
 
 .info-about3 {
-    top: 25%;
-    left: 83%;
+    /* top: 25%;
+    left: 83%; */
+    left: 61%;
+    top: 70%;
 }
 
 .img-about span{
@@ -386,6 +393,93 @@ a.btn:nth-child(2)::before{
     font-size: 1rem;
     font-weight: 600;
 }
+
+/* ---------------------------------------- services section --------------------------------------------------- */
+
+.main-text{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--hover-color);
+}
+
+.main-text h2{
+    font-weight: 700;
+    font-size: var(--normal-font);
+}
+
+.main-text span{
+    color: #fdfdfd;
+    font-size: .8rem;
+    font-weight: 200;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+}
+
+.section-services{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-gap: 2rem;
+}
+
+.section-services .service-box {
+    flex: 1 1 18rem;
+    padding: 2rem 1rem 2rem;
+    text-align: center;
+    background: var(--secon-bg-color);
+    transition: transform .4s;
+    border-radius: 10px;
+}
+
+.service-btn{
+    width: auto;
+    justify-content: center;
+}
+
+.service-box:hover{
+    transform: translateY(-.7rem);
+    box-shadow: var(--neon-box-shadow);
+}
+
+.service-icon {
+    border: 2px solid var(--hover-color);
+    padding: 2rem;
+    background: var(--bg-color);
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    border-radius: 50%;
+    position: relative;
+    color: var(--hover-color);
+    box-shadow: var(--neon-box-shadow);
+    outline: 3px solid var(--bg-color);
+}
+
+.service-box h3{
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.service-box p{
+    margin: .5rem 0 1.5rem 0;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #bdbdbd;
+    line-height: 1.6;
+
+}   
+
+
+
+
+
+
+
+
+
 
 
 
