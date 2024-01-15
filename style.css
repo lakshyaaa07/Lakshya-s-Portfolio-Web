@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+@font-face {
+    font-family: FontOne;
+    src: url(Assets/Beatrice-Regular.otf);
+}
+
+@font-face {
+    font-family: FontTwo;
+    src: url(Assets/ElgocAlt-Medium.otf);
+}
+
 *{
     padding: 0;
     margin:0;
@@ -376,7 +386,30 @@ section{
     height: auto;
 }
 
+.blob{
+    background-image: url(lakshya-1.jpg);
+    width: 380px;
+    height: 380px;
+    background-size: cover;
+    -webkit-background-position: center;
+    background-position: center center;
+    margin: 20px;
+    box-shadow: var(--neon-box-shadow);
+    animation: animate 6s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+}
+
+@keyframes animate {
+    0%, 100%{
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50%{
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+}
+
 .liquid-shape{
+    /* background-image: url(lakshya-1.jpg); */
     position:absolute;
     margin-top: 90px;
     margin-left: -20px;
@@ -695,6 +728,10 @@ section{
 
 /* ---------------------------------------- portfolio section css --------------------------------------------------- */
 
+.portfolio {
+    background-color: var(--bg-color);
+}
+
 .filter-buttons {
     margin: 2rem;
     text-align: center;
@@ -841,6 +878,10 @@ section{
     cursor: pointer;
     font-size: 1rem;
 }
+  
+
+/* footer css */
+
 
 footer {
     padding: 1.5rem 10%;
@@ -869,9 +910,103 @@ footer a i {
     color: var(--secon-bg-color);
 }
 
+/* ---------------------------------------- resume --------------------------------------------------- */
+
+/* .resumecv {
+    background: var(--secon-bg-color);
+}
+
+#cv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+}
+
+#cv p{
+    width: 30%;
+    font-family: FontOne;
+    color: #fff;
+    font-size: 1vw;
+    padding-top: 30vh;
+    padding-bottom: 30vh;
+}
+
+.resume {
+    width: 38%;
+    height: 105vh;
+    margin-bottom: 20px; 
+}
+  
+.img-cv {
+    width: 100%;
+    height: 35vh;
+    transform-origin: top;
+    margin-bottom: 10px; 
+}
 
 
+#imgTwo{
+    transform: perspective(1000px) rotateX(-90deg);
+}
 
+#imgThree{
+    transform: perspective(1000px) rotateX(-90deg);
+}
+
+.img-cv img{
+    width: 100%;
+}
+
+.text-cv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    z-index: 99;
+}
+
+.text-cv h1{
+    color: #fff;
+    font-family: FontTwo;
+    font-size: 5vw;
+    font-weight: 400;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: #111111bf;
+    pointer-events: none;
+}
+
+@media (max-width:500px) {
+    #cv p{
+        font-size: 4vw;
+        width: 80%;
+    }
+
+    .resume{
+        width: 80%;
+        height: 60vh;
+    }
+
+    .img-cv{
+        height: 20vh;
+    }
+    .text-cv h1{
+        margin-top: 50vh;
+        font-size: 9vw;
+    }
+
+} */
 
 /* ---------------------------------------- keyframes --------------------------------------------------- */
 
@@ -952,3 +1087,10 @@ footer a i {
 }
 
 /* Break Points */
+
+@media screen and (max-width: 576px) {
+    .blob{
+        width: 280px;
+        height: 280px;
+    }
+}

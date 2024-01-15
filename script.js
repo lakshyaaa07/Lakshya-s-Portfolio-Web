@@ -86,3 +86,35 @@ const header = document.querySelector("header");
 window.addEventListener("scroll", function(){
     header.classList.toggle("sticky", window.scrollY > 50)
 });
+
+
+// resume //////////////////////////////////////////////////////////////////
+
+
+var tl = gsap.timeline({scrollTrigger:{
+    trigger: "#cv",
+    start: "30% 30%",
+    end: "60% 90%", // Adjusted the end property
+    scrub: true,
+    // markers: true,
+}})
+
+tl.to("#imgTwo",{
+    rotateX: "0deg",
+})
+.to("#imgThree",{
+    rotateX: "0deg",
+})
+.to(".resume",{
+    marginTop: "50vh",
+    scale: "0.8"
+}, 'sa')
+.to(".img-cv",{
+    filter: "grayscale(1)",
+}, 'sa')
+.to(".text-cv",{
+    marginTop: "-100vh",
+}, 'sa')
+.to(".overlay",{
+    opacity: 1,
+}, 'sa')
