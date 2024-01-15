@@ -28,6 +28,21 @@
     0 0 150px rgba(18, 247, 255, 0.3);
 }
 
+::-webkit-scrollbar {
+    height: 0;
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--secon-bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--hover-color);
+    border-radius: 5rem;
+}
+
+
 body {
     font-family: "Poppins", sans-serif;
     background-color: var(--bg-color);
@@ -35,11 +50,22 @@ body {
 }
 
 header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid transparent;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     padding: 20px 10%
+}
+
+header.sticky {
+    background: var(--bg-color);
+    border-bottom: 1px solid var(--secon-bg-color);
+    padding: 12px 10%;
 }
 
 .logo{
@@ -78,6 +104,11 @@ span{
                 0 0 100px rgba(18, 247, 255, 0.6),
                 0 0 150px rgba(18, 247, 255, 0.6);
 }
+
+.navlist a.active {
+    color: var(--hover-color);
+}
+
 
 #menu-icon{
     font-size: 1.8rem;
@@ -339,15 +370,16 @@ section{
 }
 
 .img-box img{
-    width: 100%;
-    max-width: 450px;
+    position: relative;
+    width: 90%;
+    /* max-width: 450px; */
     height: auto;
 }
 
 .liquid-shape{
-    position: absolute;
-    margin-top: 150px;
-    margin-left: 2px;
+    position:absolute;
+    margin-top: 90px;
+    margin-left: -20px;
     width: 45%;
     height: 20%;
     z-index: -1;
@@ -810,6 +842,32 @@ section{
     font-size: 1rem;
 }
 
+footer {
+    padding: 1.5rem 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer p {
+    color: #bdbdbd;
+    font-size: xx-small;
+}
+
+footer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    background-color: var(--hover-color);
+    padding: .6rem;
+    border-radius: 5px;
+}
+
+footer a i {
+    font-size: 1rem;
+    color: var(--secon-bg-color);
+}
 
 
 
@@ -892,3 +950,5 @@ section{
         box-shadow: var(--neon-box-shadow);
     }
 }
+
+/* Break Points */
