@@ -162,4 +162,4 @@ scrollTop.forEach((el)=>obeserver.observe(el));
 var loader = document.querySelector("#loader")
 setTimeout(function(){
     loader.style.top = "-100%"
-},4000)
+},3700)

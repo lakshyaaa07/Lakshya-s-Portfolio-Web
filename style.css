@@ -62,7 +62,7 @@
     animation-name: load;
     animation-duration: 1s;
     animation-delay: 1s;
-    animation-timing-function: linear;
+    animation-timing-function: linear ease-in;
 }
 
 #loader h1:nth-child(2) {
@@ -1292,7 +1292,7 @@ footer a i {
         animation-name: load;
         animation-duration: 1s;
         animation-delay: 1s;
-        animation-timing-function: linear;
+        animation-timing-function: linear ease-in;
     }
 }
 
