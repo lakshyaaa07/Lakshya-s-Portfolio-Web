@@ -155,3 +155,11 @@ scrollBottom.forEach((el)=>obeserver.observe(el));
 
 const scrollTop = document.querySelectorAll(".scroll-top");
 scrollTop.forEach((el)=>obeserver.observe(el));
+
+
+// loader /////////////////////////////////////////////////////////////////////
+
+var loader = document.querySelector("#loader")
+setTimeout(function(){
+    loader.style.top = "-100%"
+},4000)
